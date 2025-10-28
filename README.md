@@ -20,7 +20,7 @@ For more details, please refer to our paper.
 
 - Clone this repo.
 ```bash
-git clone https://github.com/csjliang/DACESR
+git clone https://github.com/nathan66666/DACESR.git
 cd DACESR
 ```
 
