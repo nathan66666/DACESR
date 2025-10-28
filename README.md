@@ -2,7 +2,7 @@
 
 ### [Paper]()
 
-> **EDACESR: Degradation-Aware Conditional Embedding for Real-World Image Super-Resolution** <br>
+> **DACESR: Degradation-Aware Conditional Embedding for Real-World Image Super-Resolution** <br>
 > [Xiaoyan Lei](https://scholar.google.com/citations?hl=zh-CN&user=o8GJ_YMAAAAJ/), [Wenlong Zhang](https://wenlongzhang0517.github.io/), [Hui Liang](), [Weifeng Cao]() and [Qiuting Lin](). <br>
 > In TIP.
 
