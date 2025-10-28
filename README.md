@@ -63,14 +63,7 @@ Evaluating files (logs and visualizations) will be saved in the directory ```./r
 This project is released under the Apache 2.0 license.
 
 ### Citation
-```
-@inproceedings{jie2022DASR,
-  title={Efficient and Degradation-Adaptive Network for Real-World Image Super-Resolution},
-  author={Liang, Jie and Zeng, Hui and Zhang, Lei},
-  booktitle={European Conference on Computer Vision},
-  year={2022}
-}
-```
+
 
 ### Acknowledgement
 This project is built based on the excellent [BasicSR](https://github.com/xinntao/BasicSR) project.
