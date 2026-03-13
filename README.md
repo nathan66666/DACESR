@@ -3,7 +3,7 @@
 ### [Paper]()
 
 > **DACESR: Degradation-Aware Conditional Embedding for Real-World Image Super-Resolution** <br>
-> [Xiaoyan Lei](https://scholar.google.com/citations?hl=zh-CN&user=o8GJ_YMAAAAJ/), [Wenlong Zhang](https://wenlongzhang0517.github.io/), [Hui Liang](), [Weifeng Cao]() and [Qiuting Lin](). <br>
+> [Xiaoyan Lei](https://scholar.google.com/citations?hl=zh-CN&user=o8GJ_YMAAAAJ/), [Wenlong Zhang](https://wenlongzhang0517.github.io/), [Biao Luo](https://scholar.google.com/citations?user=YKgO7ZQAAAAJ&hl=en), [Hui Liang](), [Weifeng Cao]() and [Qiuting Lin](). <br>
 > In TIP.
 
 ### Abstract
