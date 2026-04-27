@@ -1,6 +1,6 @@
 # DACESR
 
-### [Paper]()
+### [Paper(TIP)](https://ieeexplore.ieee.org/abstract/document/11433537) | [Paper(arXiv)](https://arxiv.org/pdf/2602.23890)
 
 > **DACESR: Degradation-Aware Conditional Embedding for Real-World Image Super-Resolution** <br>
 > [Xiaoyan Lei](https://scholar.google.com/citations?hl=zh-CN&user=o8GJ_YMAAAAJ/), [Wenlong Zhang](https://wenlongzhang0517.github.io/), [Biao Luo](https://scholar.google.com/citations?user=YKgO7ZQAAAAJ&hl=en), [Hui Liang](), [Weifeng Cao]() and [Qiuting Lin](). <br>
@@ -12,7 +12,11 @@ Multimodal large models have shown excellent ability in addressing image super-r
 
 Overall pipeline of the DACESR:
 
-![illustration](Pipeline.pdf)
+![illustration](Pipeline.png)
+
+The training pipeline of the Real Embedding Extractor (REE):
+
+![illustration](REE.png)
 
 For more details, please refer to our paper.
 
@@ -43,7 +47,7 @@ PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0 python dacesr/train.py -opt
 
 - Distributed Training:
 ```bash
-YTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4335 dacesr/train.py -opt options/train/DACESR/train_DACESR.yml --launcher pytorch --auto_resume
+PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4335 dacesr/train.py -opt options/train/DACESR/train_DACESR.yml --launcher pytorch --auto_resume
 
 ```
 
@@ -63,7 +67,18 @@ Evaluating files (logs and visualizations) will be saved in the directory ```./r
 This project is released under the Apache 2.0 license.
 
 ### Citation
-
+```
+@ARTICLE{11433537,
+  author={Lei, Xiaoyan and Zhang, Wenlong and Luo, Biao and Liang, Hui and Cao, Weifeng and Lin, Qiuting},
+  journal={IEEE Transactions on Image Processing}, 
+  title={DACESR: Degradation-Aware Conditional Embedding for Real-World Image Super-Resolution}, 
+  year={2026},
+  volume={35},
+  number={},
+  pages={2997-3008},
+  keywords={Degradation;Superresolution;Random access memory;Image restoration;Image recognition;Noise;Feature extraction;Accuracy;Training;Diffusion models;Image super-resolution;multimodal large model;contrastive learning;Mamba-based network;real-world applications},
+  doi={10.1109/TIP.2026.3671639}}
+```
 
 ### Acknowledgement
 This project is built based on the excellent [BasicSR](https://github.com/xinntao/BasicSR) project.
