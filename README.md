@@ -81,7 +81,7 @@ This project is released under the Apache 2.0 license.
 ```
 
 ### Acknowledgement
-This project is built based on the excellent [BasicSR](https://github.com/xinntao/BasicSR) project.
+This project is based on [BasicSR](https://github.com/xinntao/BasicSR) and [DASR](https://github.com/csjliang/DASR). Some codes are brought from [SeeSR](https://github.com/cswry/seesr) and [RAM](https://github.com/xinyu1205/recognize-anything). Thanks for their awesome works.
 
 ### Contact
 Should you have any questions, please contact me via `xyan_lei@163.com`.
