@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ```
 
 - Prepare the training and testing dataset by following this [instruction](datasets/README.md).
-- Prepare the pre-trained models by following this [instruction](experiments/README.md).
+- Download the pretrained [RAM](https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth).
 
 #### Training
 
