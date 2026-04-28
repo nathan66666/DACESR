@@ -1,0 +1,77 @@
+name: test_DACESR
+model_type: DACESR_test_Model
+scale: 4
+num_gpu: 1
+manual_seed: 0
+
+ram_model_path: /lxy/SeeSR/preset/models/ram_swin_large_14m.pth
+
+ram_model_path1: /lxy/SeeSR/experiments/DAPE_ft_cls1/models/net_g_latest.pth
+ram_model_path2: None
+ram_model_path3: None
+ram_model_path4: None
+tile: # use the tile mode for limited GPU memory when testing.
+  tile_size: 256 # the higher, the more utilized GPU memory and the less performance change against the full image. must be an integer multiple of the window size.
+  tile_pad: 32 # overlapping between adjacency patches.must be an integer multiple of the window size.
+
+
+# dataset and data loader settings
+datasets:
+  test_1:
+    name: DIV2K_bicubic
+    type: PairedImageDataset
+    dataroot_gt: datasets/DIV2K_valid_HR
+    dataroot_lq: datasets/DIV2K_bicubic
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: DACESR
+  img_size: 48
+  patch_size: 1
+  embed_dim: 192
+  depths: [2,2,2,2,2,2,2,2]
+  rms_norm: False
+  residual_in_fp32: True
+  fused_add_norm: False
+  if_abs_pos_embed: False
+  if_rope: False
+  if_rope_residual: True
+  if_cls_token: False
+  bimamba_type: "none"
+  upscale: 4
+  upsampler: 'pixelshuffle'
+  resi_connection: '1conv'
+
+
+network_d:
+  type: UNetDiscriminatorSN
+  num_in_ch: 3
+  num_feat: 64
+  skip_connection: True
+
+
+
+# path
+path:
+  pretrain_network_g: DACESR.pth
+  param_key_g: params
+  strict_load_g: true
+
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+
+    lpips: # metric name, can be arbitrary
+      type: calculate_lpips
+      crop_border: 4
+      test_y_channel: true
